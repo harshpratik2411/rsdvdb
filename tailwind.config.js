@@ -23,7 +23,8 @@ export default {
       arkOrange: "#d28422",
       grey: "#626965",
       lightGrey: "#978580",
-      darkGrey: "#3f4441",
+      darkGrey: "#3f4441", 
+       pink : 	'#E72660'
     },
     extend: {
       boxShadow:{

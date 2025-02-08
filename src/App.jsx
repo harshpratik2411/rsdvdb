@@ -4,6 +4,8 @@ import NavbarMain from './Components/Navbar/NavbarMain';
 import HeroMain from './Components/Hero/HeroMain'; 
 import HeroGradient from './Components/Hero/HeroGradient';
 import SubHero from './Components/Hero/SubHero';
+import AboutMeMain from './Components/AboutMeSection/AboutMeMain';
+import HelperSection from './Components/HelperSection';
 
 
 function App() {
@@ -12,7 +14,9 @@ function App() {
     <HeroGradient/>
      <NavbarMain/>   
      <HeroMain/> 
-     <SubHero/>
+     <SubHero/> 
+     <AboutMeMain/> 
+     <HelperSection/>
     </main>
   );
 }
