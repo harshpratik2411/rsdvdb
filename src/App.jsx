@@ -1,23 +1,31 @@
 import React from 'react'; 
-import './index.css'; 
-import NavbarMain from './Components/Navbar/NavbarMain'; 
-import HeroMain from './Components/Hero/HeroMain'; 
-import HeroGradient from './Components/Hero/HeroGradient';
-import SubHero from './Components/Hero/SubHero';
-import AboutMeMain from './Components/AboutMeSection/AboutMeMain';
-import HelperSection from './Components/HelperSection';
+import { Outlet } from 'react-router-dom';
+import './index.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './Pages/HomePage'; 
+import AboutMe from './Pages/AboutMe'
+import Skills from './Pages/Skills';
+import Projects from './Pages/Projects'
+import Contact from './Pages/Contact';
+
 
 
 function App() {
   return (
-    <main className='font-body'>
-    <HeroGradient/>
-     <NavbarMain/>   
-     <HeroMain/> 
-     <SubHero/> 
-     <AboutMeMain/> 
-     <HelperSection/>
-    </main>
+    <Router>
+      <main className="font-body">
+        {/* Defining the structure with Routes */}
+        <Routes> 
+          {/* Main homepage route */}
+          <Route path="/" element={<HomePage />} />
+          {/* Add routes for other pages */}
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 
